@@ -21,7 +21,7 @@ def optimize_printing(print_jobs: List[Dict], constraints: Dict) -> Dict:
     limits = PrinterConstraints(**constraints)
 
     def sort_key(job: PrintJob):
-        return (job.priority, -job.print_time)
+        return (job.priority)
 
     jobs.sort(key=sort_key)
 
